@@ -1,0 +1,14 @@
+defaultNamespace: cattle-monitoring-system
+helm:
+  releaseName: rancher-monitoring
+  repo: https://charts.rancher.io
+  chart: rancher-monitoring
+  version: 14.5.100
+  values:
+    prometheus:
+      prometheusSpec:
+        resources:
+          requests:
+            cpu: global.fleet.clusterLabels.nikkelmaMonitoringCPURequest
+          limits:
+            cpu: global.fleet.clusterLabels.nikkelmaMonitoringCPULimit
