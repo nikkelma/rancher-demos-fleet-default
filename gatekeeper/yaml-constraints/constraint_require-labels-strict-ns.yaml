@@ -1,0 +1,14 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: MandatoryLabels
+metadata:
+  name: require-labels-strict-ns
+spec:
+  match:
+    kinds:
+      - apiGroups: [""]
+        kinds: ["Pod"]
+    namespaces:
+      - strict
+  parameters:
+    labels:
+      - "env"
