@@ -1,4 +1,4 @@
-defaultNamespace: cattle-monitoring-system
+defaultNamespace: cattle-logging-system
 helm:
   releaseName: rancher-logging-crd
   repo: https://charts.rancher.io
